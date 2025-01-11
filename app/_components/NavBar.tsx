@@ -37,12 +37,12 @@ function NavBar() {
   if (!isVisible) return null;
 
   return (
-    <Box className="fixed top-8 left-1/2 transform -translate-x-1/2 transition-all duration-300 w-full px-4">
+    <Box className="fixed top-8 left-1/2 transform -translate-x-1/2 transition-all duration-300 w-full md:w-auto px-4">
       {/* Large Screen Nav */}
       <div className="hidden md:block">
         {/* Ensures this only shows on medium and larger screens */}
         <Card className="inline-flex mx-auto p-3 w-full max-w-5xl">
-          <Flex gap="4" align="center" justify="between" className="w-full">
+          <Flex gap="7" align="center" justify="between" className="w-full">
             {/* Left Section: Avatar and Name */}
             <Flex
               className="hover:text-teal-300 transition-colors duration-200 cursor-pointer"
