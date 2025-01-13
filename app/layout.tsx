@@ -20,9 +20,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <Theme appearance="dark" accentColor="teal">
-          <Box className="absolute">
+          <Box className="absolute w-full">
             <NavBar />
-            <main>{children}</main>
+            {children}
           </Box>
           {/*<ThemePanel />*/}
         </Theme>

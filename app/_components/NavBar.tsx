@@ -37,7 +37,7 @@ function NavBar() {
   if (!isVisible) return null;
 
   return (
-    <Box className="fixed top-8 left-1/2 transform -translate-x-1/2 transition-all duration-300 w-full md:w-auto px-4">
+    <Box className="fixed top-8 left-1/2 transform -translate-x-1/2 transition-all duration-300 w-full md:w-auto px-4 z-10">
       {/* Large Screen Nav */}
       <div className="hidden md:block">
         {/* Ensures this only shows on medium and larger screens */}
@@ -45,7 +45,7 @@ function NavBar() {
           <Flex gap="7" align="center" justify="between" className="w-full">
             {/* Left Section: Avatar and Name */}
             <Flex
-              className="hover:text-teal-300 transition-colors duration-200 cursor-pointer"
+              className="hover:text-teal-600 transition-colors duration-200 cursor-pointer"
               gap="3"
               align="center"
             >
@@ -69,7 +69,7 @@ function NavBar() {
                 <Text
                   size="2"
                   weight="bold"
-                  className="hover:text-teal-300 transition-colors duration-200"
+                  className="hover:text-teal-600 transition-colors duration-200"
                 >
                   Projects
                 </Text>
@@ -78,7 +78,7 @@ function NavBar() {
                 <Text
                   size="2"
                   weight="bold"
-                  className="hover:text-teal-300 transition-colors duration-200"
+                  className="hover:text-teal-600 transition-colors duration-200"
                 >
                   About
                 </Text>
@@ -87,7 +87,7 @@ function NavBar() {
                 <Text
                   size="2"
                   weight="bold"
-                  className="hover:text-teal-300 transition-colors duration-200"
+                  className="hover:text-teal-600 transition-colors duration-200"
                 >
                   Blog
                 </Text>
@@ -96,7 +96,7 @@ function NavBar() {
                 <Text
                   size="2"
                   weight="bold"
-                  className="hover:text-teal-300 transition-colors duration-200"
+                  className="hover:text-teal-600 transition-colors duration-200"
                 >
                   Products
                 </Text>
