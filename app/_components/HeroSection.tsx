@@ -12,11 +12,12 @@ import {
 import { FileUserIcon, GithubIcon, LinkedinIcon } from "lucide-react";
 import Link from "next/link";
 import GridSectionBg from "@/app/_components/GridSectionBg";
+import HeroIllustration from "@/app/_components/HeroIllustration";
 
 function HeroSection() {
   return (
     <GridSectionBg>
-      <Box className=" relative mt-32 space-y-8">
+      <Box className=" relative mt-32 mb-12 space-y-8">
         {/* Hero Button */}
         <HeroButton />
 
@@ -40,7 +41,7 @@ function HeroSection() {
         </Flex>
 
         {/* Separator */}
-        <Separator className="max-w-sm" size="4" />
+        {/*<Separator className="max-w-sm" size="4" />*/}
 
         {/* Social Links */}
         <Flex gap="4">
@@ -60,6 +61,8 @@ function HeroSection() {
             </Tooltip>
           </Link>
         </Flex>
+
+        <HeroIllustration />
       </Box>
     </GridSectionBg>
   );
