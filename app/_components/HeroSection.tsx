@@ -5,25 +5,27 @@ import {
   Button,
   Flex,
   Heading,
-  Separator,
+  Section,
   Text,
   Tooltip,
 } from "@radix-ui/themes";
 import { FileUserIcon, GithubIcon, LinkedinIcon } from "lucide-react";
 import Link from "next/link";
-import GridSectionBg from "@/app/_components/GridSectionBg";
 import HeroIllustration from "@/app/_components/HeroIllustration";
 
 function HeroSection() {
   return (
-    <GridSectionBg>
-      <Box className=" relative mt-32 mb-12 space-y-8">
+    <Box
+      px="4"
+      className="bg-neutral-950 relative pt-28 md:pb-12"
+    >
+      <Section size="2" className="bg-neutral-950 space-y-8 z-10 ">
         {/* Hero Button */}
         <HeroButton />
 
         {/* Heading Section */}
         <Heading as="h1" size="9" style={{ letterSpacing: "1.3px" }}>
-          I'm Dinesh
+          I&apos;m Dinesh
         </Heading>
         <Text as="p" className="max-w-lg">
           I work with React Ecosystem and write to teach people how to rebuild
@@ -32,10 +34,22 @@ function HeroSection() {
 
         {/* Buttons Section */}
         <Flex gap="4" className="inline-flex">
-          <Button size="3" color="gray" variant="surface" highContrast>
+          <Button
+            radius="full"
+            size="3"
+            color="gray"
+            variant="surface"
+            className="cursor-pointer"
+          >
             Learn How
           </Button>
-          <Button size="3" color="gray" variant="outline" highContrast>
+          <Button
+            radius="full"
+            size="3"
+            color="gray"
+            variant="outline"
+            className="cursor-pointer"
+          >
             More about me
           </Button>
         </Flex>
@@ -61,10 +75,9 @@ function HeroSection() {
             </Tooltip>
           </Link>
         </Flex>
-
-        <HeroIllustration />
-      </Box>
-    </GridSectionBg>
+      </Section>
+      <HeroIllustration />
+    </Box>
   );
 }
 

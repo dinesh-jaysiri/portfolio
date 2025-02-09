@@ -1,11 +1,17 @@
 import React, { PropsWithChildren } from "react";
-import { Container } from "@radix-ui/themes";
+import { Box, Container, Section } from "@radix-ui/themes";
 
 function SectionBlock({ children }: PropsWithChildren) {
   return (
-    <section className="py-20 w-full dark:bg-black bg-white   overflow-hidden relative flex items-center justify-center">
-      <div className="px-5 mx-auto max-w-5xl w-full ">{children}</div>
-    </section>
+    <Box
+      py="100px"
+      px="4"
+      className="bg-none relative z-0"
+    >
+      <Section size="2" className="bg-none space-y-8 ">
+        {children}
+      </Section>
+    </Box>
   );
 }
 

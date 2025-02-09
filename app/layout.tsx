@@ -3,7 +3,7 @@ import "@radix-ui/themes/styles.css";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { PropsWithChildren } from "react";
-import { Theme } from "@radix-ui/themes";
+import { Box, Container, Theme } from "@radix-ui/themes";
 import NavBar from "./_components/NavBar";
 
 const inter = Inter({
@@ -20,8 +20,10 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html lang="en">
       <body className={inter.className}>
         <Theme appearance="dark" accentColor="teal">
+          <Box className="bg-neutral-950">
+            <Container className="overflow-x-hidden"  size="4">{children}</Container>
+          </Box>
           <NavBar />
-          {children}
         </Theme>
       </body>
     </html>

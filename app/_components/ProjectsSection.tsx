@@ -1,10 +1,10 @@
 import React from "react";
 import SectionTitle from "@/app/_components/SectionTitle";
-import { Card, Flex, Grid, IconButton } from "@radix-ui/themes";
+import { Flex } from "@radix-ui/themes";
 import ProjectCard from "@/app/_components/ProjectCard";
 import SectionBlock from "@/app/_components/SectionBlock";
 
-function ProjectsSection(props) {
+function ProjectsSection() {
   const projects = [
     {
       title: "E-commerce Platform",

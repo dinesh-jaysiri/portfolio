@@ -11,7 +11,7 @@ function SectionTitle({
   subTitle?: string;
 }) {
   return (
-    <div className="space-y-2 ">
+    <div className="space-y-2  ">
       <p className="text-5xl font-semibold">
         {whiteTitle}{" "}
         {accentTitle && (
