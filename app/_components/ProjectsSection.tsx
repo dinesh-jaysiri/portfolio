@@ -79,7 +79,7 @@ function ProjectsSection() {
       {/*  ))}*/}
       {/*</Grid>*/}
 
-      <Flex direction="column" gap="4" className="mt-8">
+      <Flex direction="column" gap="6">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}
