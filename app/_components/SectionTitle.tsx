@@ -11,15 +11,15 @@ function SectionTitle({
   subTitle?: string;
 }) {
   return (
-    <div className="space-y-2  ">
-      <p className="text-5xl font-semibold">
+    <Box mb="9" >
+      <Heading  mb="3" as="h2" size="8">
         {whiteTitle}{" "}
         {accentTitle && (
           <span className="text-teal-600 underline">{accentTitle}</span>
         )}
-      </p>
-      <p className=" max-w-5xl">{subTitle}</p>
-    </div>
+      </Heading>
+      <Text>{subTitle}</Text>
+    </Box>
   );
 }
 

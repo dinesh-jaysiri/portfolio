@@ -5,7 +5,6 @@ const HeroIllustration = () => {
   return (
     <div
       className="p-12 absolute hidden md:block  md:w-[50vw] md:top-[30%] right-[20vw] lg:right-[-10vw] md:right-[-5vw]  z-0"
-      // className="-translate-y-[10%] 2xl:left-1/2 2xl:max-w-[400px] 2xl:translate-y-20 max-md:min-w-[300px] max-md:translate-y-1/2 max-md:bottom-[-40%] max-md:right-[-8rem] max-md:opacity-30 max-md:pointer-events-none max-md:[&_.hero-illustration-card]:opacity-80 select-none"
       style={{
         perspective: "100px",
         transformStyle: "preserve-3d",
