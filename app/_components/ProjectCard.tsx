@@ -10,7 +10,7 @@ import {
   Separator,
 } from "@radix-ui/themes";
 import Image from "next/image";
-import { ExternalLinkIcon, GithubIcon } from "lucide-react";
+import { GithubIcon, LinkIcon } from "lucide-react";
 import Link from "next/link";
 
 interface ProjectCardProps {
@@ -75,8 +75,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <Flex gap="3">
             {liveLink && (
               <Link href={liveLink} className="no-underline">
-                <Button radius="full" size="2" variant="surface" color="teal">
-                  <ExternalLinkIcon className="mr-2 h-4 w-4" />
+                <Button radius="full" size="3" variant="surface" color="teal">
+                  <LinkIcon className="h-4 w-4" />
                   View Project
                 </Button>
               </Link>
@@ -86,11 +86,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 <Button
                   className="cursor-pointer"
                   radius="full"
-                  size="2"
+                  size="3"
                   variant="outline"
                   color="gray"
                 >
-                  <GithubIcon className="mr-2 h-4 w-4" />
+                  <GithubIcon className="h-4 w-4" />
                   Repository
                 </Button>
               </Link>

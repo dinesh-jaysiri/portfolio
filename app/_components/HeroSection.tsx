@@ -9,16 +9,19 @@ import {
   Text,
   Tooltip,
 } from "@radix-ui/themes";
-import { FileUserIcon, GithubIcon, LinkedinIcon } from "lucide-react";
+import {
+  ChevronDown,
+  FileUserIcon,
+  GithubIcon,
+  LinkedinIcon,
+} from "lucide-react";
 import Link from "next/link";
 import HeroIllustration from "@/app/_components/HeroIllustration";
+import { cn } from "@/lib/utils";
 
 function HeroSection() {
   return (
-    <Box
-      px="4"
-      className="bg-neutral-950 relative pt-40 md:pb-20"
-    >
+    <Box px="4" className="bg-neutral-950 relative pt-40 md:pb-20">
       <Section size="2" className="bg-neutral-950 space-y-8 z-10 ">
         {/* Hero Button */}
         <HeroButton />
@@ -34,23 +37,27 @@ function HeroSection() {
 
         {/* Buttons Section */}
         <Flex gap="4" className="inline-flex">
+          <Link className="cursor-pointer" href="#about">
+            <Button
+              radius="full"
+              size="4"
+              color="gray"
+              variant="surface"
+              className={cn("cursor-pointer")}
+            >
+              Learn How
+            </Button>
+          </Link>
+
           <Button
             radius="full"
-            size="3"
-            color="gray"
-            variant="surface"
-            className="cursor-pointer"
-          >
-            Learn How
-          </Button>
-          <Button
-            radius="full"
-            size="3"
+            size="4"
             color="gray"
             variant="outline"
             className="cursor-pointer"
           >
             More about me
+            <ChevronDown />
           </Button>
         </Flex>
 

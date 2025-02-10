@@ -1,8 +1,9 @@
 import React from "react";
 import SectionBlock from "./SectionBlock";
 import SectionTitle from "./SectionTitle";
-import { Flex } from "@radix-ui/themes";
+import { Button, Flex } from "@radix-ui/themes";
 import BlogPostCard from "./BlogPostCard";
+import { ChevronRightIcon } from "lucide-react";
 
 function BlogSection() {
   const blogs = [
@@ -48,6 +49,13 @@ function BlogSection() {
         {blogs.map((blog) => (
           <BlogPostCard key={blog.title} {...blog} />
         ))}
+      </Flex>
+
+      <Flex justify={"center"} className=" mt-8">
+        <Button radius="full" size="3" variant="ghost" color="teal">
+          Read More
+          <ChevronRightIcon className=" h-5 w-5" />
+        </Button>
       </Flex>
     </SectionBlock>
   );
