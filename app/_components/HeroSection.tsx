@@ -17,7 +17,7 @@ function HeroSection() {
   return (
     <Box
       px="4"
-      className="bg-neutral-950 relative pt-28 md:pb-12"
+      className="bg-neutral-950 relative pt-40 md:pb-20"
     >
       <Section size="2" className="bg-neutral-950 space-y-8 z-10 ">
         {/* Hero Button */}

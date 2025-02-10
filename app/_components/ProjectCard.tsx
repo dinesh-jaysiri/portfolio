@@ -7,6 +7,7 @@ import {
   Box,
   Button,
   Heading,
+  Separator,
 } from "@radix-ui/themes";
 import Image from "next/image";
 import { ExternalLinkIcon, GithubIcon } from "lucide-react";
@@ -19,6 +20,7 @@ interface ProjectCardProps {
   technologies: string[];
   liveLink?: string;
   githubLink?: string;
+  index: number;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -28,39 +30,49 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   technologies,
   liveLink,
   githubLink,
+  index,
 }) => {
   return (
-    <Card
-      variant="surface"
-      size="3"
-      className="w-full overflow-hidden"
-    >
-      <Flex direction="row" gap="6">
+    <Card variant="surface" size="2" className="w-full overflow-hidden">
+      <Flex
+        direction={{
+          initial: "column-reverse",
+          sm: index % 2 === 0 ? "row" : "row-reverse",
+        }} // Swap order for every alternate project
+        gap="6"
+      >
         {/* Left Content */}
-        <Box className="flex-1 space-y-8">
-          <Heading as="h3" size="5" weight="bold" className="text-white">
-            {title}
-          </Heading>
-          <Text as="p" size="3" className="text-gray-400 max-w-xl">
-            {description}
-          </Text>
-
-          {/* Tools Section */}
-          <Flex align="center" gap="2">
-            <Text size="2" className="text-gray-500">
-              Tools:
+        <Flex direction="column" className="flex-1 space-y-6 justify-between">
+          <Box className="space-y-6">
+            <Heading as="h3" size="6" weight="bold" className="text-white">
+              {title}
+            </Heading>
+            <Text as="p" size="3" className="text-gray-400 max-w-xl">
+              {description}
             </Text>
-            <Flex gap="2" wrap="wrap">
-              {technologies.map((tech, index) => (
-                <Badge key={index} variant="soft" color="teal" radius="large">
-                  {tech}
-                </Badge>
-              ))}
+
+            {/* Tools Section */}
+            <Flex align="center" gap="2">
+              <Text size="2" className="text-gray-500">
+                Tools:
+              </Text>
+              <Flex gap="2" wrap="wrap">
+                {technologies.map((tech, index) => (
+                  <Badge key={index} variant="soft" color="teal" radius="large">
+                    {tech}
+                  </Badge>
+                ))}
+              </Flex>
             </Flex>
-          </Flex>
+          </Box>
+
+          {/* Full-Width Separator */}
+          <Box className="w-full">
+            <Separator size="4" className="bg-gray-800" />
+          </Box>
 
           {/* Action Buttons */}
-          <Flex gap="3" mt="4">
+          <Flex gap="3">
             {liveLink && (
               <Link href={liveLink} className="no-underline">
                 <Button radius="full" size="2" variant="surface" color="teal">
@@ -71,17 +83,27 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             )}
             {githubLink && (
               <Link href={githubLink} className="no-underline cursor-pointer">
-                <Button className="cursor-pointer" radius="full" size="2" variant="outline" color="gray">
+                <Button
+                  className="cursor-pointer"
+                  radius="full"
+                  size="2"
+                  variant="outline"
+                  color="gray"
+                >
                   <GithubIcon className="mr-2 h-4 w-4" />
                   Repository
                 </Button>
               </Link>
             )}
           </Flex>
-        </Box>
+        </Flex>
 
         {/* Right Image */}
-        <Box className="relative hidden md:block w-[400px] h-[220px]">
+        <Box
+          width={{ initial: "100%", sm: "350px", md: "400px" }}
+          height="250px"
+          className="relative"
+        >
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-green-500/10 rounded-lg overflow-hidden">
             <Image
               src={imageSrc || "/placeholder.svg"}
