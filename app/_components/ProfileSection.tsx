@@ -23,10 +23,9 @@ const techStack = [
 
 const ProfileSection = () => {
   return (
-    <section className="py-16 px-6 max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
+    <section className="py-16 px-6 max-w-6xl mx-auto flex flex-col md:flex-row gap-32">
       {/* Left: Profile Card */}
       <ProfileCard />
-
       {/* Right: About Details */}
       <Box className="flex-1">
         <Heading as="h2" size="7" weight="bold" className="mb-4">
