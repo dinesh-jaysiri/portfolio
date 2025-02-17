@@ -66,17 +66,17 @@ function HeroSection() {
 
         {/* Social Links */}
         <Flex gap="4">
-          <Link href="#" className="opacity-40 ">
+          <Link href="#" className="opacity-60 ">
             <Tooltip content="Github">
               <GithubIcon strokeWidth={1} size={"20"} />
             </Tooltip>
           </Link>
-          <Link href="#" className="opacity-40 ">
+          <Link href="#" className="opacity-60 ">
             <Tooltip content="Linkedin">
               <LinkedinIcon strokeWidth={1} size={"20"} />
             </Tooltip>
           </Link>
-          <Link href="#" className="opacity-40 ">
+          <Link href="#" className="opacity-60 ">
             <Tooltip content="Download resume">
               <FileUserIcon strokeWidth={1} size={"20"} />
             </Tooltip>

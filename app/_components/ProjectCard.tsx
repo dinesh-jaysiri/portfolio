@@ -15,6 +15,7 @@ import Link from "next/link";
 
 interface ProjectCardProps {
   title: string;
+  shortDescription: string;
   description: string;
   imageSrc: string;
   technologies: string[];
@@ -25,7 +26,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
-  description,
+  shortDescription,
   imageSrc,
   technologies,
   liveLink,
@@ -33,12 +34,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   index,
 }) => {
   return (
-    <Card
-      variant="surface"
-      size="2"
-      className="w-full overflow-hidden"
-    >
-
+    <Card variant="surface" size="2" className="w-full overflow-hidden">
       <Flex
         direction={{
           initial: "column-reverse",
@@ -53,7 +49,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               {title}
             </Heading>
             <Text as="p" size="3" className="text-gray-400 max-w-xl">
-              {description}
+              {shortDescription}
             </Text>
 
             {/* Tools Section */}
@@ -81,7 +77,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             {liveLink && (
               <Link href={liveLink} className="no-underline">
                 <Button radius="full" size="3" variant="surface" color="teal">
-                  <LinkIcon className="h-4 w-4" />
+                  <LinkIcon strokeWidth={1} size={"20"} />
                   View Project
                 </Button>
               </Link>
@@ -95,7 +91,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   variant="outline"
                   color="gray"
                 >
-                  <GithubIcon className="h-4 w-4" />
+                  <GithubIcon strokeWidth={1} size={"20"} />
                   Repository
                 </Button>
               </Link>

@@ -1,6 +1,7 @@
 import React from "react";
-import { Box, Flex, Text } from "@radix-ui/themes";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Box, Flex, Text, Tooltip } from "@radix-ui/themes";
+import { FileUserIcon, GithubIcon, LinkedinIcon } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -16,29 +17,22 @@ const Footer = () => {
         {/* Copyright */}
         <Text size="2">© 2025 Dinesh Jayasiri. All rights reserved.</Text>
 
-        {/* Social Icons */}
         <Flex gap="4">
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Github size={20} className="hover:text-white transition" />
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Linkedin size={20} className="hover:text-white transition" />
-          </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Twitter size={20} className="hover:text-white transition" />
-          </a>
+          <Link href="#" className="opacity-60 ">
+            <Tooltip content="Github">
+              <GithubIcon strokeWidth={1} size={"20"} />
+            </Tooltip>
+          </Link>
+          <Link href="#" className="opacity-60 ">
+            <Tooltip content="Linkedin">
+              <LinkedinIcon strokeWidth={1} size={"20"} />
+            </Tooltip>
+          </Link>
+          <Link href="#" className="opacity-60 ">
+            <Tooltip content="Download resume">
+              <FileUserIcon strokeWidth={1} size={"20"} />
+            </Tooltip>
+          </Link>
         </Flex>
       </Flex>
     </footer>

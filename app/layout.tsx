@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import { PropsWithChildren } from "react";
 import { Box, Container, Theme } from "@radix-ui/themes";
 import NavBar from "./_components/NavBar";
+import Footer from "./_components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,7 +22,11 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <body className={inter.className}>
         <Theme appearance="dark" accentColor="teal">
           <Box className="bg-neutral-950">
-            <Container className="overflow-x-hidden"  size="4">{children}</Container>
+            <Container className="overflow-x-hidden" size="4">
+              {children}
+              <Footer />
+            </Container>
+            
           </Box>
           <NavBar />
         </Theme>
