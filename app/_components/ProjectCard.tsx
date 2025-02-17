@@ -33,7 +33,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   index,
 }) => {
   return (
-    <Card variant="surface" size="2" className="w-full overflow-hidden">
+    <Card
+      variant="surface"
+      size="2"
+      className="w-full overflow-hidden"
+    >
+
       <Flex
         direction={{
           initial: "column-reverse",

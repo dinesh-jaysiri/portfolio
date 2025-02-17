@@ -1,24 +1,52 @@
 import React from "react";
-import {
-  Card,
-  Box,
-  Flex,
-  Text,
-  Avatar,
-  Separator,
-  Heading,
-  IconButton,
-} from "@radix-ui/themes";
-import { MoreVertical } from "lucide-react";
+import { Box, Flex, Heading, Separator, Text, Tooltip } from "@radix-ui/themes";
 import ProfileCard from "./ProfileCard";
+import Image from "next/image";
+import TooltipCard from "./TooltipCard"; // Import TooltipCard component
 
 const techStack = [
-  { name: "Next.js", icon: "/icons/nextjs.svg" },
-  { name: "Prisma", icon: "/icons/prisma.svg" },
-  { name: "PostgreSQL", icon: "/icons/postgresql.svg" },
-  { name: "Auth.js", icon: "/icons/authjs.svg" },
-  { name: "ShadCN", icon: "/icons/shadcn.svg" },
-  { name: "TypeScript", icon: "/icons/typescript.svg" },
+  {
+    name: "Next.js",
+    icon: "/tech/nextjs.svg",
+    link: "https://nextjs.org",
+    description:
+      "My go-to framework for static generation, dynamic paths, and built-in API. ps: I prefer the pages folder over the new app router.",
+  },
+  {
+    name: "Prisma",
+    icon: "/tech/prisma.svg",
+    link: "https://www.prisma.io",
+    description:
+      "I use Prisma for its strong type safety and database migrations, making database management seamless.",
+  },
+  {
+    name: "React Query",
+    icon: "/tech/reactquery.svg",
+    link: "https://tanstack.com/query",
+    description:
+      "Helps me handle server state efficiently with caching and background synchronization.",
+  },
+  {
+    name: "Auth.js",
+    icon: "/tech/authjs.svg",
+    link: "https://authjs.dev",
+    description:
+      "Handles authentication securely with built-in OAuth, JWT, and credential-based authentication.",
+  },
+  {
+    name: "TypeScript",
+    icon: "/tech/ts.svg",
+    link: "https://www.typescriptlang.org",
+    description:
+      "I prefer TypeScript for its static typing, which helps catch errors at compile time.",
+  },
+  {
+    name: "Solidity",
+    icon: "/tech/solidity.svg",
+    link: "https://soliditylang.org",
+    description:
+      "I use Solidity to write smart contracts for blockchain applications.",
+  },
 ];
 
 const ProfileSection = () => {
@@ -26,6 +54,7 @@ const ProfileSection = () => {
     <section className="py-16 px-6 max-w-6xl mx-auto flex flex-col md:flex-row gap-32">
       {/* Left: Profile Card */}
       <ProfileCard />
+
       {/* Right: About Details */}
       <Box className="flex-1">
         <Heading as="h2" size="7" weight="bold" className="mb-4">
@@ -48,45 +77,72 @@ const ProfileSection = () => {
           </Heading>
           <Flex gap="4" wrap="wrap">
             {techStack.map((tech) => (
-              <Box key={tech.name} className="flex items-center gap-2">
-                <img src={tech.icon} alt={tech.name} className="w-8 h-8" />
-                <Text size="3">{tech.name}</Text>
-              </Box>
+              <Tooltip key={tech.name} content={<TooltipCard {...tech} />}>
+                <Image
+                  src={tech.icon}
+                  alt={tech.name}
+                  width={30}
+                  height={30}
+                  className="cursor-pointer"
+                />
+              </Tooltip>
             ))}
           </Flex>
         </Box>
 
         <Separator size="4" className="my-6" />
 
-        {/* Experience Section */}
+        {/* Work Experience Section */}
         <Box className="mb-8">
           <Heading as="h3" size="5" weight="bold" className="mb-4">
             Work Experience
           </Heading>
-          <Flex direction="column" gap="4">
+          <Flex direction="column" gap="6">
+            {/* Senior Software Engineer */}
             <Box>
               <Text size="3" weight="bold">
-                Senior Software Engineer
+                Senior Software Engineer {"  "}
               </Text>
               <Text size="2" className="text-gray-500">
                 XYZ Company | 2022 - Present
               </Text>
-              <Text size="2" className="text-gray-400">
-                Developing a multi-tenant pharmacy e-commerce platform using
-                Next.js and Prisma.
-              </Text>
+              <ul className="list-disc pl-5 text-gray-400 text-sm mt-2 space-y-1">
+                <li>
+                  Developing a multi-tenant pharmacy e-commerce platform using
+                  Next.js and Prisma.
+                </li>
+                <li>
+                  Implementing authentication with Auth.js for secure user
+                  management.
+                </li>
+                <li>
+                  Optimizing PostgreSQL queries for better database performance.
+                </li>
+                <li>Integrating Stripe for subscription-based billing.</li>
+              </ul>
             </Box>
+
+            {/* Software Engineer */}
             <Box>
               <Text size="3" weight="bold">
-                Software Engineer
+                Software Engineer {"  "}
               </Text>
               <Text size="2" className="text-gray-500">
                 ABC Tech | 2019 - 2022
               </Text>
-              <Text size="2" className="text-gray-400">
-                Built scalable SaaS applications and optimized PostgreSQL
-                performance.
-              </Text>
+              <ul className="list-disc pl-5 text-gray-400 text-sm mt-2 space-y-1">
+                <li>
+                  Built scalable SaaS applications with Next.js and TypeScript.
+                </li>
+                <li>
+                  Designed and implemented a role-based access control system.
+                </li>
+                <li>Refactored backend services to improve API performance.</li>
+                <li>
+                  Led a team of developers to migrate a legacy system to a
+                  modern stack.
+                </li>
+              </ul>
             </Box>
           </Flex>
         </Box>

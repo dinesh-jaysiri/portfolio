@@ -3,6 +3,7 @@ import ProjectsSection from "@/app/_components/ProjectsSection";
 import BlogSection from "./_components/BlogSection";
 import ProfileSection from "./_components/ProfileSection";
 import Footer from "./_components/Footer";
+import OpenToWorkSection from "./_components/OpenToWorkSection";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <ProjectsSection />
       <BlogSection />
       <ProfileSection />
+      <OpenToWorkSection />
       <Footer />
     </>
   );

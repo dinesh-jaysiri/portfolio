@@ -1,13 +1,16 @@
-import React, { PropsWithChildren } from "react";
+import React from "react";
 import { Box, Section } from "@radix-ui/themes";
+import { cn } from "@/lib/utils";
 
-function SectionBlock({ children }: PropsWithChildren) {
+function SectionBlock({
+  children,
+  className,
+}: {
+  className?: string;
+  children?: React.ReactNode;
+}) {
   return (
-    <Box
-      py="60px"
-      px="4"
-      className="bg-none relative z-0"
-    >
+    <Box  px="4" className={cn("bg-none relative z-0 py-[60px]", className)}>
       <Section size="2" className="bg-none space-y-8 ">
         {children}
       </Section>

@@ -43,7 +43,7 @@ function HeroSection() {
               size="4"
               color="gray"
               variant="surface"
-              className={cn("cursor-pointer")}
+              className={cn("pointer")}
             >
               Learn How
             </Button>
@@ -54,7 +54,7 @@ function HeroSection() {
             size="4"
             color="gray"
             variant="outline"
-            className="cursor-pointer"
+            className="pointer"
           >
             More about me
             <ChevronDown />
@@ -83,6 +83,8 @@ function HeroSection() {
           </Link>
         </Flex>
       </Section>
+      {/* Floating tech icons */}
+      <div className="absolute top-8 right-8 w-40 h-56 rounded-full bg-emerald-400/10 blur-3xl " />
       <HeroIllustration />
     </Box>
   );
