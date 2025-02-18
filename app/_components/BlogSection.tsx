@@ -36,7 +36,7 @@ function BlogSection() {
     },
   ];
   return (
-    <SectionBlock>
+    <SectionBlock id="blog">
       <SectionTitle
         whiteTitle="Insights & Stories"
         accentTitle=""

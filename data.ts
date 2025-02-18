@@ -1,22 +1,29 @@
 export const projects = [
   {
-    id: "ecommerce",
-    title: "E-commerce Platform",
+    id: "game-hub",
+    title: "Game Hub",
     shortDescription:
-      "A full-stack e-commerce solution with real-time inventory management. This platform supports secure payments, order tracking,",
+      "A modern video game discovery platform utilizing React Query, React Router, and Zustand for state management. Features infinite scrolling and data fetching from RAWG API.",
     description:
-      "A full-stack e-commerce solution with real-time inventory management. This platform supports secure payments, order tracking, and a seamless UI/UX design.",
-    imageSrc: "/projects/project-1.jpg",
+      "Game Hub is an advanced video game discovery app that integrates React Query for optimized data fetching, Zustand for global state management, and React Router for seamless navigation. It features infinite scrolling, caching mechanisms, and a well-structured project architecture for maintainability. This frontend application consumes the RAWG API to provide real-time game data, making it a great portfolio project.",
+    imageSrc: "/projects/game-hub-main.png",
     screenshots: [
-      "/projects/project-1.jpg",
-      "/projects/project-2.png",
-      "/projects/project-3.jpg",
-      "/projects/project-4.png",
-      "/projects/project-5.png",
+      "/projects/screenshots/game-hub-1.png",
+      "/projects/screenshots/game-hub-2.png",
+      "/projects/screenshots/game-hub-3.png",
+      "/projects/screenshots/game-hub-4.png",
+      "/projects/screenshots/game-hub-5.png",
     ],
-    technologies: ["Next.js", "Node.js", "MongoDB", "Stripe"],
-    liveLink: "https://example-ecommerce.com",
-    githubLink: "https://github.com/yourusername/ecommerce-project",
+    technologies: [
+      "React",
+      "TypeScript",
+      "React Query",
+      "Zustand",
+      "React Router",
+      "Chakra UI",
+    ],
+    liveLink: "https://game-hub-dinesh-jayasiris-projects.vercel.app/",
+    githubLink: "https://github.com/dinesh-jaysiri/game-hub",
   },
   {
     id: "task-manager",
