@@ -6,13 +6,13 @@ export const projects = [
       "A modern video game discovery platform utilizing React Query, React Router, and Zustand for state management. Features infinite scrolling and data fetching from RAWG API.",
     description:
       "Game Hub is an advanced video game discovery app that integrates React Query for optimized data fetching, Zustand for global state management, and React Router for seamless navigation. It features infinite scrolling, caching mechanisms, and a well-structured project architecture for maintainability. This frontend application consumes the RAWG API to provide real-time game data, making it a great portfolio project.",
-    imageSrc: "/projects/game-hub-main.png",
+    imageSrc: "/projects/game-hub-main.webp",
     screenshots: [
-      "/projects/screenshots/game-hub-1.png",
-      "/projects/screenshots/game-hub-2.png",
-      "/projects/screenshots/game-hub-3.png",
-      "/projects/screenshots/game-hub-4.png",
-      "/projects/screenshots/game-hub-5.png",
+      "/projects/screenshots/game-hub-1.webp",
+      "/projects/screenshots/game-hub-2.webp",
+      "/projects/screenshots/game-hub-3.webp",
+      "/projects/screenshots/game-hub-4.webp",
+      "/projects/screenshots/game-hub-5.webp",
     ],
     technologies: [
       "React",
