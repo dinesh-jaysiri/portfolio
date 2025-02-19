@@ -1,6 +1,5 @@
 import React from "react";
-import { Card, Flex, Text } from "@radix-ui/themes";
-import Image from "next/image";
+import {  Text } from "@radix-ui/themes";
 
 interface TooltipCardProps {
   icon: string;
