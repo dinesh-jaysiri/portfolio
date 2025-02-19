@@ -85,4 +85,22 @@ export const projects = [
     liveLink: "https://next-15-resume-builder.vercel.app",
     githubLink: "https://github.com/dinesh-jaysiri/next-15-resume-builder",
   },
+  {
+    id: "netzee-landing",
+    title: "Netzee - App Landing Page",
+    shortDescription:
+      "A sleek, fast, and responsive landing page for Netzee, a location-based information-sharing platform. Built with semantic HTML, CSS, and JavaScript animations.",
+    description:
+      "Netzee is a location-based spontaneous information-sharing platform designed to bring local deals and experiences to you, wherever you are. This landing page is built with clean, semantic HTML5, optimized CSS, and lightweight JavaScript for smooth animations. It uses Flexbox and CSS Grid for a fully responsive layout and optimized images for fast load times, ensuring an excellent user experience.",
+    imageSrc: "/projects/netzee-main.webp",
+    screenshots: [
+      "/projects/screenshots/netzee-1.webp",
+      "/projects/screenshots/netzee-2.webp",
+      "/projects/screenshots/netzee-3.webp",
+      "/projects/screenshots/netzee-4.webp",
+    ],
+    technologies: ["HTML5", "CSS3", "JavaScript", "Flexbox", "CSS Grid"],
+    liveLink: "https://netzee.app",
+    githubLink: "https://github.com/dinesh-jaysiri/netzee",
+  },
 ];
