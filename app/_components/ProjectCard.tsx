@@ -14,6 +14,7 @@ import { GithubIcon, LinkIcon } from "lucide-react";
 import Link from "next/link";
 
 interface ProjectCardProps {
+  id: string;
   title: string;
   shortDescription: string;
   description: string;
@@ -25,6 +26,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
+  id,
   title,
   shortDescription,
   imageSrc,
@@ -45,9 +47,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         {/* Left Content */}
         <Flex direction="column" className="flex-1 space-y-6 justify-between">
           <Box className="space-y-6">
-            <Heading as="h3" size="6" weight="bold" className="text-white">
-              {title}
-            </Heading>
+            <Link href={`/projects/${id}`}>
+              <Heading as="h3" size="6" weight="bold" className="text-white pointer">
+                {title}
+              </Heading>
+            </Link>
             <Text as="p" size="3" className="text-gray-400 max-w-xl">
               {shortDescription}
             </Text>
@@ -75,17 +79,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {/* Action Buttons */}
           <Flex gap="3">
             {liveLink && (
-              <Link href={liveLink} className="no-underline">
-                <Button radius="full" size="3" variant="surface" color="teal">
+              <Link href={liveLink} className="no-underline pointer">
+                <Button className="pointer" radius="full" size="3" variant="surface" color="teal">
                   <LinkIcon strokeWidth={1} size={"20"} />
                   View Project
                 </Button>
               </Link>
             )}
             {githubLink && (
-              <Link href={githubLink} className="no-underline cursor-pointer">
+              <Link href={githubLink} className="no-underline pointer">
                 <Button
-                  className="cursor-pointer"
+                className="pointer"
                   radius="full"
                   size="3"
                   variant="outline"
@@ -100,21 +104,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </Flex>
 
         {/* Right Image */}
-        <Box
-          width={{ initial: "100%", sm: "350px", md: "400px" }}
-          height="250px"
-          className="relative"
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-green-500/10 rounded-lg overflow-hidden">
-            <Image
-              src={imageSrc || "/placeholder.svg"}
-              alt={title}
-              fill
-              className="object-cover rounded-lg"
-              style={{ mixBlendMode: "luminosity" }}
-            />
-          </div>
-        </Box>
+        <Link href={`/projects/${id}`}>
+          <Box
+            width={{ initial: "100%", sm: "350px", md: "400px" }}
+            height="250px"
+            className="relative pointer"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-green-500/10 rounded-lg overflow-hidden">
+              <Image
+                src={imageSrc || "/placeholder.svg"}
+                alt={title}
+                fill
+                className="object-cover rounded-lg"
+                style={{ mixBlendMode: "luminosity" }}
+              />
+            </div>
+          </Box>
+        </Link>
       </Flex>
     </Card>
   );
