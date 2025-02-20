@@ -104,3 +104,43 @@ export const projects = [
     githubLink: "https://github.com/dinesh-jaysiri/netzee",
   },
 ];
+
+export const blogs = [
+  {
+    title: "Building Truly Reusable React Components",
+    description:
+      "Learn how to create flexible and maintainable React components using smart class merging, prop spreading, and ref forwarding techniques.",
+    imageSrc: "/blogs/blog-1.webp",
+    link: "https://medium.com/@ywdinesh/building-truly-reusable-react-components-682cdfbd0986",
+    tags: ["React", "TypeScript", "Reusable Components", "Tailwind CSS"],
+    read_time: "2",
+    views: "1457",
+  },
+  {
+    title: "Building a Lightweight Redux Store from Scratch",
+    description:
+      "Understand Redux fundamentals by creating a simple yet powerful state management system from scratch using JavaScript.",
+    imageSrc: "/blogs/blog-2.webp",
+    link: "https://medium.com/@ywdinesh/building-a-lightweight-redux-store-from-scratch-a-guide-to-managing-state-in-javascript-2c7762e2bdc7",
+    tags: ["Redux", "State Management", "JavaScript", "Frontend"],
+    read_time: "6",
+    views: "1874",
+  },
+  {
+    title:
+      "Solidity Gas Optimization: Tips and Tricks for Writing Efficient Smart Contracts",
+    description:
+      "Learn how to write optimized Solidity smart contracts by reducing gas costs with proven techniques and best practices.",
+    imageSrc: "/blogs/blog-3.webp",
+    link: "https://medium.com/@ywdinesh/solidity-gas-optimization-tips-and-tricks-for-writing-efficient-smart-contracts-41cfc4610023",
+    tags: [
+      "Solidity",
+      "Ethereum",
+      "Smart Contracts",
+      "Gas Optimization",
+      "Blockchain",
+    ],
+    read_time: "6",
+    views: "2543",
+  },
+];
