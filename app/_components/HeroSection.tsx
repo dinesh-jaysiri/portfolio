@@ -31,8 +31,9 @@ function HeroSection() {
           I&apos;m Dinesh
         </Heading>
         <Text as="p" className="max-w-lg">
-          I work with React Ecosystem and write to teach people how to rebuild
-          and redefine fundamental concepts through mental models.
+          I specialize in the JavaScript ecosystem, architecting scalable
+          applications while exploring how AI, security, and modern web
+          technologies reshape digital experiences.
         </Text>
 
         {/* Buttons Section */}

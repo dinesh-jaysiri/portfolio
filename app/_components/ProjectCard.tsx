@@ -63,9 +63,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
             {/* Tools Section */}
             <Flex align="center" gap="2">
-              <Text size="2" className="text-gray-500">
-                Tools:
-              </Text>
               <Flex gap="2" wrap="wrap">
                 {technologies.map((tech, index) => (
                   <Badge key={index} variant="soft" color="teal" radius="large">
