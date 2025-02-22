@@ -7,17 +7,14 @@ import {
   Heading,
   Section,
   Text,
-  Tooltip,
 } from "@radix-ui/themes";
 import {
   ChevronDown,
-  FileUserIcon,
-  GithubIcon,
-  LinkedinIcon,
 } from "lucide-react";
 import Link from "next/link";
 import HeroIllustration from "@/app/_components/HeroIllustration";
 import { cn } from "@/lib/utils";
+import SocialLinks from "./SocialLinks";
 
 function HeroSection() {
   return (
@@ -68,23 +65,7 @@ function HeroSection() {
         {/*<Separator className="max-w-sm" size="4" />*/}
 
         {/* Social Links */}
-        <Flex gap="4">
-          <Link href="#" className="opacity-60 ">
-            <Tooltip content="Github">
-              <GithubIcon strokeWidth={1} size={"20"} />
-            </Tooltip>
-          </Link>
-          <Link href="#" className="opacity-60 ">
-            <Tooltip content="Linkedin">
-              <LinkedinIcon strokeWidth={1} size={"20"} />
-            </Tooltip>
-          </Link>
-          <Link href="#" className="opacity-60 ">
-            <Tooltip content="Download resume">
-              <FileUserIcon strokeWidth={1} size={"20"} />
-            </Tooltip>
-          </Link>
-        </Flex>
+        <SocialLinks />
       </Section>
       {/* Floating tech icons */}
       <div className="absolute top-8 right-8 w-40 h-56 rounded-full bg-emerald-400/10 blur-3xl " />

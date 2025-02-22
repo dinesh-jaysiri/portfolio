@@ -1,7 +1,6 @@
 import React from "react";
-import { Box, Flex, Text, Tooltip } from "@radix-ui/themes";
-import { FileUserIcon, GithubIcon, LinkedinIcon } from "lucide-react";
-import Link from "next/link";
+import { Box, Flex, Text } from "@radix-ui/themes";
+import SocialLinks from "./SocialLinks";
 
 const Footer = () => {
   return (
@@ -15,25 +14,14 @@ const Footer = () => {
         className="text-gray-400 px-6 py-2"
       >
         {/* Copyright */}
-        <Text size="2">© 2025 Dinesh Jayasiri. <Text size="2" className="hidden md:inline" >All rights reserved.</Text></Text>
+        <Text size="2">
+          © 2025 Dinesh Jayasiri.{" "}
+          <Text size="2" className="hidden md:inline">
+            All rights reserved.
+          </Text>
+        </Text>
 
-        <Flex gap="4">
-          <Link href="#" className="opacity-60 ">
-            <Tooltip content="Github">
-              <GithubIcon strokeWidth={1} size={"20"} />
-            </Tooltip>
-          </Link>
-          <Link href="#" className="opacity-60 ">
-            <Tooltip content="Linkedin">
-              <LinkedinIcon strokeWidth={1} size={"20"} />
-            </Tooltip>
-          </Link>
-          <Link href="#" className="opacity-60 ">
-            <Tooltip content="Download resume">
-              <FileUserIcon strokeWidth={1} size={"20"} />
-            </Tooltip>
-          </Link>
-        </Flex>
+        <SocialLinks />
       </Flex>
     </footer>
   );
