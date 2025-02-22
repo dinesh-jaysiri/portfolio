@@ -18,7 +18,7 @@ export default function Home() {
 }
 
 //ToDo:
-// checkout each project and create descriptions and ss if not deployed yet deploy them to vercel 
+// checkout each project and create descriptions and ss if not deployed yet deploy them to vercel -done
 
 // create separate social icon stack and remove duplicate code 
 // add email to social icons stack 

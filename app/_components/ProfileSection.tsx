@@ -3,6 +3,7 @@ import { Box, Flex, Heading, Separator, Text, Tooltip } from "@radix-ui/themes";
 import ProfileCard from "./ProfileCard";
 import Image from "next/image";
 import TooltipCard from "./TooltipCard"; // Import TooltipCard component
+import Link from "next/link";
 
 const techStack = [
   {
@@ -51,7 +52,10 @@ const techStack = [
 
 const ProfileSection = () => {
   return (
-    <section id="about" className="py-16 px-6 max-w-6xl mx-auto flex flex-col md:flex-row gap-32">
+    <section
+      id="about"
+      className="py-16 px-6 max-w-6xl mx-auto flex flex-col md:flex-row gap-32"
+    >
       {/* Left: Profile Card */}
       <ProfileCard />
 
@@ -98,27 +102,28 @@ const ProfileSection = () => {
             Work Experience
           </Heading>
           <Flex direction="column" gap="6">
-            {/* Senior Software Engineer */}
             <Box>
               <Text size="3" weight="bold">
-                Senior Software Engineer {"  "}
+                Software Engineer {"  "}
               </Text>
               <Text size="2" className="text-gray-500">
-                XYZ Company | 2022 - Present
+                Infragist | Jul 2024 – Dec 2024 (Part-time)
               </Text>
               <ul className="list-disc pl-5 text-gray-400 text-sm mt-2 space-y-1">
                 <li>
-                  Developing a multi-tenant pharmacy e-commerce platform using
-                  Next.js and Prisma.
+                  Developed LoveTickets.co.uk, an event management platform for
+                  concerts and live events.
                 </li>
                 <li>
-                  Implementing authentication with Auth.js for secure user
-                  management.
+                  Designed the database architecture with Laravel and
+                  implemented key features for ticket purchasing and event
+                  management
                 </li>
                 <li>
-                  Optimizing PostgreSQL queries for better database performance.
+                  Built React-based UI components, converting Figma designs into
+                  interactive pages, and collaborated with BA, UI designers, and
+                  project managers to deliver features per SRS documents.
                 </li>
-                <li>Integrating Stripe for subscription-based billing.</li>
               </ul>
             </Box>
 
@@ -128,19 +133,40 @@ const ProfileSection = () => {
                 Software Engineer {"  "}
               </Text>
               <Text size="2" className="text-gray-500">
-                ABC Tech | 2019 - 2022
+                10QBIT | Jan 2023 – Oct 2024
               </Text>
               <ul className="list-disc pl-5 text-gray-400 text-sm mt-2 space-y-1">
                 <li>
-                  Built scalable SaaS applications with Next.js and TypeScript.
+                  Maintained and enhanced the pharmacy management application
+                  Primed.com, supporting 10K+ monthly transactions.
                 </li>
                 <li>
-                  Designed and implemented a role-based access control system.
+                  Implemented client-side caching to enhance user experience and
+                  reduce server load.
                 </li>
-                <li>Refactored backend services to improve API performance.</li>
                 <li>
-                  Led a team of developers to migrate a legacy system to a
-                  modern stack.
+                  Applied the repository pattern to organize backend code,
+                  increasing maintainability and scalability.
+                </li>
+              </ul>
+            </Box>
+
+            {/* Associate Blockchain Developer */}
+            <Box>
+              <Text size="3" weight="bold">
+                Associate Blockchain Developer {"  "}
+              </Text>
+              <Text size="2" className="text-gray-500">
+                10QBIT | Apr 2023 – Dec 2023
+              </Text>
+              <ul className="list-disc pl-5 text-gray-400 text-sm mt-2 space-y-1">
+                <li>
+                  Built an experimental voting system for a small organization,
+                  demonstrating practical applications of blockchain technology.
+                </li>
+                <li>
+                  Integrated Ethereum smart contracts with frontend using
+                  Ethers.js.
                 </li>
               </ul>
             </Box>
@@ -157,26 +183,55 @@ const ProfileSection = () => {
           <Flex direction="column" gap="4">
             <Box>
               <Text size="3" weight="bold">
-                B.Sc. in Computer Science
+                BSc (Hons) Electrical & Electronics Engineering (ug){" "}
               </Text>
               <Text size="2" className="text-gray-500">
-                University of XYZ - 2020
+                2016 - 2021 South Eastern University of Sri Lanka
               </Text>
             </Box>
             <Box>
-              <Text size="3" weight="bold">
-                Diploma in Software Engineering
-              </Text>
+              <Link
+                href={
+                  "https://certificates.cs50.io/e9aa9cf1-b818-4f13-a0f4-a974f0a4ec45.pdf?size=letter"
+                }
+              >
+                <Text className="pointer" size="3" weight="bold">
+                  CS50x: Intro to Computer Science{" "}
+                </Text>
+              </Link>
+
               <Text size="2" className="text-gray-500">
-                ABC Institute - 2018
+                Harvard - Feb 2023
               </Text>
             </Box>
             <Box>
-              <Text size="3" weight="bold">
-                Certified Full-Stack Developer
-              </Text>
+              <Link
+                href={
+                  "https://www.credly.com/badges/bd4fc0d5-a55d-4694-a701-aecf589312b0/linked_in_profile"
+                }
+              >
+                <Text className="pointer" size="3" weight="bold">
+                  IBM Blockchain Essentials{" "}
+                </Text>
+              </Link>
+
               <Text size="2" className="text-gray-500">
-                Online Bootcamp - 2017
+                Nov 2022
+              </Text>
+            </Box>
+            <Box>
+              <Link
+                href={
+                  "https://freecodecamp.org/certification/DineshJayasiri/javascript-algorithms-and-data-structures"
+                }
+              >
+                <Text className="pointer" size="3" weight="bold">
+                  JavaScript Algorithms and Data Structures{" "}
+                </Text>
+              </Link>
+
+              <Text size="2" className="text-gray-500">
+                Mar 2023
               </Text>
             </Box>
           </Flex>

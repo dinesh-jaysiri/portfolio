@@ -26,7 +26,7 @@ function BlogSection() {
 
       <Flex justify={"center"} className=" mt-8">
         <Link href="https://medium.com/@ywdinesh" target="_blank" >
-          <Button radius="full" size="3" variant="ghost" color="teal">
+          <Button className="pointer" radius="full" size="3" variant="ghost" color="teal">
             Read More
             <ChevronRightIcon className=" h-5 w-5" />
           </Button>

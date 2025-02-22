@@ -38,7 +38,7 @@ function HeroSection() {
 
         {/* Buttons Section */}
         <Flex gap="4" className="inline-flex">
-          <Link className="cursor-pointer" href="#about">
+          <Link className="cursor-pointer" href="#projects">
             <Button
               radius="full"
               size="4"
@@ -50,16 +50,18 @@ function HeroSection() {
             </Button>
           </Link>
 
-          <Button
-            radius="full"
-            size="4"
-            color="gray"
-            variant="outline"
-            className="pointer"
-          >
-            More about me
-            <ChevronDown />
-          </Button>
+          <Link href={"#about"}>
+            <Button
+              radius="full"
+              size="4"
+              color="gray"
+              variant="outline"
+              className="pointer"
+            >
+              More about me
+              <ChevronDown />
+            </Button>
+          </Link>
         </Flex>
 
         {/* Separator */}

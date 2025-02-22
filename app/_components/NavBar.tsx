@@ -70,8 +70,8 @@ function NavBar() {
 
             {/* Navigation Links */}
             <Flex gap="6" align="center">
-              {["projects", "about", "blog", "products"].map((item) => (
-                <Link key={item} href={`#${item}`}>
+              {["projects", "about", "blog"].map((item) => (
+                <Link key={item} href={`/#${item}`}>
                   <Text
                     size="2"
                     weight="bold"
@@ -81,6 +81,17 @@ function NavBar() {
                   </Text>
                 </Link>
               ))}
+
+              <Link  key={"products"} href={`/`}>
+                <Text
+                
+                  size="2"
+                  weight="bold"
+                  className="hover:text-teal-600 transition-colors duration-200"
+                >
+                  {"products".charAt(0).toUpperCase() + "products".slice(1)}
+                </Text>
+              </Link>
             </Flex>
           </Flex>
         </Card>
@@ -104,13 +115,21 @@ function NavBar() {
               sideOffset={8}
               className="right-4"
             >
-              {["projects", "about", "blog", "products"].map((item) => (
+              {["projects", "about", "blog"].map((item) => (
                 <DropdownMenu.Item key={item}>
-                  <Link href={`#${item}`}>
+                  <Link href={`/#${item}`}>
                     <Text>{item.charAt(0).toUpperCase() + item.slice(1)}</Text>
                   </Link>
                 </DropdownMenu.Item>
               ))}
+
+              <DropdownMenu.Item disabled key={"products"}>
+                <Link href={`/`}>
+                  <Text>
+                    {"products".charAt(0).toUpperCase() + "products".slice(1)}
+                  </Text>
+                </Link>
+              </DropdownMenu.Item>
             </DropdownMenu.Content>
           </DropdownMenu.Root>
         </Flex>
