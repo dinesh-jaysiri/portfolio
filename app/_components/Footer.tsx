@@ -15,7 +15,7 @@ const Footer = () => {
         className="text-gray-400 px-6 py-2"
       >
         {/* Copyright */}
-        <Text size="2">© 2025 Dinesh Jayasiri. All rights reserved.</Text>
+        <Text size="2">© 2025 Dinesh Jayasiri. <Text size="2" className="hidden md:inline" >All rights reserved.</Text></Text>
 
         <Flex gap="4">
           <Link href="#" className="opacity-60 ">
