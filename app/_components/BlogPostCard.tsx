@@ -2,6 +2,7 @@ import type React from "react";
 import { Card, Flex, Text, Badge, Box, Heading } from "@radix-ui/themes";
 import Image from "next/image";
 import { Clock, Eye } from "lucide-react";
+import Link from "next/link";
 
 interface BlogPostCardProps {
   title: string;
@@ -10,6 +11,7 @@ interface BlogPostCardProps {
   tags: string[];
   read_time: string;
   views: string;
+  link: string;
 }
 
 const BlogPostCard: React.FC<BlogPostCardProps> = ({
@@ -19,6 +21,7 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({
   tags,
   read_time,
   views,
+  link,
 }) => {
   return (
     <Card variant="surface" size="2" className="w-full overflow-hidden">
@@ -33,21 +36,26 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({
           className="relative"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-green-500/10 rounded-lg overflow-hidden">
-            <Image
-              src={imageSrc || "/placeholder.svg"}
-              alt={title}
-              fill
-              className="object-cover rounded-lg"
-              style={{ mixBlendMode: "luminosity" }}
-            />
+            <Link href={link} target="_blank">
+              <Image
+                src={imageSrc || "/placeholder.svg"}
+                alt={title}
+                fill
+                className="object-cover rounded-lg pointer"
+                style={{ mixBlendMode: "luminosity" }}
+              />
+            </Link>
           </div>
         </Box>
 
         {/* Content Section */}
         <Flex direction="column" className="flex-1 space-y-4">
-          <Heading as="h3" size="5" weight="bold" className="text-white">
-            {title}
-          </Heading>
+          <Link href={link} target="_blank">
+            <Heading as="h3" size="5" weight="bold" className="text-white">
+              {title}
+            </Heading>
+          </Link>
+
           <Text as="p" size="3" className="text-gray-400 max-w-xl">
             {description}
           </Text>

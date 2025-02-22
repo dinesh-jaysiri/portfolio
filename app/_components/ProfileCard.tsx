@@ -13,8 +13,6 @@ const ProfileCard = () => {
         {/* Glossy overlay effect */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
 
-
-
         {/* Animated connection dots */}
         <div className="absolute top-6 left-6 flex space-x-2">
           {[0, 1, 2].map((i) => (
@@ -61,7 +59,7 @@ const ProfileCard = () => {
               Dinesh Jayasiri
             </Text>
             <Text size="2" className="text-gray-400 font-medium block">
-              Full-Stack Developer
+              Software Engineer
             </Text>
             <Text
               align={"left"}
@@ -103,7 +101,6 @@ const ProfileCard = () => {
 
       {/* Floating tech icons */}
       <div className="absolute -top-8 -right-8 w-24 h-24 rounded-full bg-emerald-400/10 blur-xl animate-pulse" />
-    
     </div>
   );
 };

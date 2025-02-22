@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Flex, Heading, Separator, Text, Tooltip } from "@radix-ui/themes";
 import ProfileCard from "./ProfileCard";
 import Image from "next/image";
-import TooltipCard from "./TooltipCard"; // Import TooltipCard component
+import TooltipCard from "./TooltipCard"; 
 import Link from "next/link";
 
 const techStack = [
