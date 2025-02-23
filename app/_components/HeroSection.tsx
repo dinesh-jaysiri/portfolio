@@ -24,7 +24,12 @@ function HeroSection() {
         <HeroButton />
 
         {/* Heading Section */}
-        <Heading as="h1" size="9" style={{ letterSpacing: "1.3px" }}>
+        <Heading
+          as="h1"
+          size="9"
+          style={{ letterSpacing: "1.3px" }}
+          aria-label="I'm Dinesh | Full-Stack Software Engineer Specializing in Next.js and Blockchain Development"
+        >
           I&apos;m Dinesh
         </Heading>
         <Text as="p" className="max-w-lg">
@@ -60,14 +65,8 @@ function HeroSection() {
             </Button>
           </Link>
         </Flex>
-
-        {/* Separator */}
-        {/*<Separator className="max-w-sm" size="4" />*/}
-
-        {/* Social Links */}
         <SocialLinks />
       </Section>
-      {/* Floating tech icons */}
       <div className="absolute top-8 right-8 w-40 h-56 rounded-full bg-emerald-400/10 blur-3xl " />
       <HeroIllustration />
     </Box>

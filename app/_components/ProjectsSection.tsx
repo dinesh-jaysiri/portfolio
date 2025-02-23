@@ -8,12 +8,12 @@ import { projects } from "@/data";
 function ProjectsSection() {
 
   return (
-    <SectionBlock id="projects" >
+    <SectionBlock id="projects">
       <SectionTitle
         whiteTitle="Selected"
         accentTitle="Projects"
         subTitle={
-          "Some description about this section and more Some description about this section and more."
+          "Showcasing innovative solutions built with modern web technologies."
         }
       />
 

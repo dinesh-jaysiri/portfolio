@@ -14,7 +14,7 @@ function BlogSection() {
         whiteTitle="Insights & Stories"
         accentTitle=""
         subTitle={
-          "Explore our latest articles, deep dives, and industry insights to stay ahead in the world of technology and innovation"
+          "Insights, deep dives, and best practices in software engineering and blockchain."
         }
       />
 
@@ -25,8 +25,14 @@ function BlogSection() {
       </Flex>
 
       <Flex justify={"center"} className=" mt-8">
-        <Link href="https://medium.com/@ywdinesh" target="_blank" >
-          <Button className="pointer" radius="full" size="3" variant="ghost" color="teal">
+        <Link href="https://medium.com/@ywdinesh" target="_blank">
+          <Button
+            className="pointer"
+            radius="full"
+            size="3"
+            variant="ghost"
+            color="teal"
+          >
             Read More
             <ChevronRightIcon className=" h-5 w-5" />
           </Button>
