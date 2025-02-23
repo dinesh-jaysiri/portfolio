@@ -730,7 +730,7 @@ const AnimatedIcons = () => (
     {/*icon4*/}
 
     <div
-      className="isolate before:transition-opacity glass-icon size-11 flex items-center justify-center bg-white/5 backdrop-blur-sm rounded-[40px] size-7 absolute translate-x-[-50%] translate-y-[-50%] left-[29%] top-[48%] rotate-[-33deg] gradient-box_gradientBorder__H_SK6"
+      className="isolate before:transition-opacity glass-icon flex items-center justify-center bg-white/5 backdrop-blur-sm rounded-[40px] size-7 absolute translate-x-[-50%] translate-y-[-50%] left-[29%] top-[48%] rotate-[-33deg] gradient-box_gradientBorder__H_SK6"
       style={{
         border: "1.5px solid transparent",
         background:
@@ -757,7 +757,7 @@ const AnimatedIcons = () => (
     {/*icon 5*/}
 
     <div
-      className="isolate before:transition-opacity glass-icon size-11 flex items-center justify-center bg-white/5 backdrop-blur-sm rounded-[22px] size-7 absolute translate-x-[-50%] translate-y-[-50%] left-[64%] top-[68%] rotate-[20deg] gradient-box_gradientBorder__H_SK6"
+      className="isolate before:transition-opacity glass-icon  flex items-center justify-center bg-white/5 backdrop-blur-sm rounded-[22px] size-7 absolute translate-x-[-50%] translate-y-[-50%] left-[64%] top-[68%] rotate-[20deg] gradient-box_gradientBorder__H_SK6"
       style={{
         border: "1.5px solid transparent",
         background:
@@ -772,7 +772,7 @@ const AnimatedIcons = () => (
         strokeWidth="0"
         role="img"
         viewBox="0 0 24 24"
-        className="size-[45%] size-[55%]"
+        className="size-[55%]"
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -798,7 +798,7 @@ const AnimatedIcons = () => (
         fill="currentColor"
         strokeWidth="0"
         role="img"
-        className="size-[45%] size-[55%]"
+        className="size-[55%]"
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"

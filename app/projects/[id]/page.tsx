@@ -1,19 +1,17 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import {
-  Badge,
-  Flex,
-  Heading,
-  Text,
-  Box,
-  Grid,
-} from "@radix-ui/themes";
+import { Badge, Flex, Heading, Text, Box, Grid } from "@radix-ui/themes";
 import { projects } from "@/data";
 import SectionBlock from "@/app/_components/SectionBlock";
 import SectionTitle from "@/app/_components/SectionTitle";
 
-export default function ProjectDetail({ params }: { params: { id: string } }) {
-  const project = projects.find((p) => p.id === params.id);
+interface Props {
+  params: Promise<{ id: string }>;
+}
+
+export default async function ProjectDetail({ params }: Props) {
+  const id = (await params).id;
+  const project = projects.find((p) => p.id === id);
   if (!project) return notFound();
 
   return (
